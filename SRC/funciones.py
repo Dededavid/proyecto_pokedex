@@ -43,18 +43,18 @@ def getPokemon(pokeId):
 
         #display(Image(data["sprites"]["front_default"]))
         #display(Image(data["sprites"]["back_default"]))
-        return("Este es: ",(data["name"]).upper())
+        print("Este es: ",(data["name"]).upper())
 
-        listaabilities = []
+        list_abilities = []
         for i in data['abilities']:
-            listaabilities.append(i["ability"]['name'] )
-        return ("Habilidad especial:", " & ".join(listaabilities))
+            list_abilities.append(i["ability"]['name'] )
+        print ("Habilidad especial:", " & ".join(list_abilities))
             
 
-        types=[]
+        list_types= []
         for i in data['types']:
-            types.append(i['type']['name'])
-        return("Es un Pokémon de tipo: "," & ".join(types))
+            list_types.append(i['type']['name'])
+        print ("Es un Pokémon de tipo: "," & ".join(list_types))
   
     else:
         return("El pokémon que estás buscando no está en nuestra Pokédex de primera generación")
